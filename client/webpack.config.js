@@ -22,11 +22,12 @@ module.exports = () => {
         template: './index.html',
         title: 'Text Editor'
       }),
+
       new GenerateSW(),
-      new InjectManifest({
-        swSrc: './src/sw.js',
-        swDest: 'service-worker.js',
-      }),
+      // new InjectManifest({
+      //   swSrc: './src-sw.js',
+      //   swDest: 'service-worker.js',
+      // }),
       new WebpackPwaManifest({
         name: 'Editor',
         short_name: 'Editor',

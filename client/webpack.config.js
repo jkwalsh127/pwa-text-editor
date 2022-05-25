@@ -31,7 +31,7 @@ module.exports = () => {
         name: 'Editor',
         short_name: 'Editor',
         description: 'Record note and thoughts',
-        background_color: #f6f6f6,
+        background_color: '#FF5733',
         start_url: './',
         publicPath: './',
         icons: [

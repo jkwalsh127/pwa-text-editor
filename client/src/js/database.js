@@ -18,7 +18,7 @@ export const putDb = async (content) => {
   const editorDb = await openDB('editor', 'readwrite');
   const tx = editorDb.transaction('todos');
   const store = tx.objectStore('editor');
-  const request = store.put({todo:content});
+  const request = store.put({text:content});
   const result = await request;
   console.log('data saved to the db', result);
 };

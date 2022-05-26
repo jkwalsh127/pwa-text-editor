@@ -13,22 +13,31 @@ const initdb = async () =>
   });
 
 // TODO: Add logic to a method that accepts some content and adds it to the database
-export const putDb = async (content) => {
-  console.log('PUT content to add to the database');
-  const editorDb = await openDB('editor', 'readwrite');
-  const tx = editorDb.transaction('todos');
-  const store = tx.objectStore('editor');
-  const request = store.put({text:content});
+// export const putDb = async (content) => {
+//   console.log('PUT content to add to the database');
+//   const jateDb = await openDB('jate', 'readwrite');
+//   const tx = jateDb.transaction('jate');
+//   const store = tx.objectStore('jate');
+//   const request = store.put({ text: content });
+//   const result = await request;
+//   console.log('data saved to the db', result);
+// };
+export const postDb = async (content) => {
+  console.log('Post content to the database');
+  const jateDb = await openDB('jate', 1);
+  const tx = jateDb.transaction('jate', 'readwrite');
+  const store = tx.objectStore('jate');
+  const request = store.add({ text: content });
   const result = await request;
-  console.log('data saved to the db', result);
+  console.log('content saved to the database', result);
 };
 
 // TODO: Add logic for a method that gets all the content from the database
-export const getDb = async () => {
+export const getAllDb = async () => {
   console.log('GET all content from the database')
-  const editorDb = await openDB('editor', 1);
-  const tx = editorDb.transaction('editor', 'readonly');
-  const store = tx. objectStore('editor');
+  const jateDb = await openDB('jate', 1);
+  const tx = jateDb.transaction('jate', 'readonly');
+  const store = tx. objectStore('jate');
   const request = store.getaAll();
   const result = await request;
   console.log('result.value', result);

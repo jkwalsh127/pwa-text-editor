@@ -27,6 +27,8 @@ warmStrategyCache({
   strategy: pageCache,
 });
 
+registerRoute(({ request }) => request.mode === "navigate", pageCache);
+
 const cacheName = 'static-resources';
 const matchCb = ({ request }) => {
   console.log(request);

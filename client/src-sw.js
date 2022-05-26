@@ -1,5 +1,5 @@
 const { offlineFallback, warmStrategyCache } = require('workbox-recipes');
-const { CacheFirst } = require('workbox-strategies');
+const { CacheFirst, StaleWhileRevalidate } = require('workbox-strategies');
 const { registerRoute } = require('workbox-routing');
 const { CacheableResponsePlugin } = require('workbox-cacheable-response');
 const { ExpirationPlugin } = require('workbox-expiration');
@@ -29,22 +29,13 @@ warmStrategyCache({
 
 registerRoute(({ request }) => request.mode === "navigate", pageCache);
 
-const cacheName = 'static-resources';
-const matchCb = ({ request }) => {
-  console.log(request);
-  return (
-    request.destination === "style" ||
-    request.destination === "script" ||
-    request.destination === "worker" 
-  );
-};
 registerRoute(
   // matching function to determine if the route should be a match to the request
-  matchCb,
+  ({ request }) => ['style', 'script', 'worker'].includes(request.destination),
   // caching strategy to respond from cache if possible, otherwise falling back to network response, which will then update cache. Cache is always revalidated.
   new StaleWhileRevalidate({
     // static resources for service worker to respond with (specifically CSS, JS, Web Worker)
-    cacheName,
+    cacheName: 'asset-cache',
     plugins: [
       // cache any requests with a status code between 0 and 200
       new CacheableResponsePlugin({ statuses: [0, 200] })

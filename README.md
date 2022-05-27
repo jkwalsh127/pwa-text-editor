@@ -5,6 +5,7 @@ Visit the Heroku deployed app by clicking <a href="https://fierce-reef-46335.her
 ## Table of contents
 * [Description](#description)
 * [Usage](#usage)
+* [Technologies](#technologies)
 * [Credits](#credits)
 * [Questions](#questions)
 * [License](#license)

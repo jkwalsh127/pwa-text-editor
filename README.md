@@ -1,6 +1,6 @@
 # PWA - Just Another Text Editor (JATE)
 
-Visit the Heroku deployed app by clicking <a href="https://fierce-reef-46335.herokuapp.com/" target="_blank">**here**<a> 
+Visit the Heroku deployed app by clicking <a href="https://hidden-eyrie-12248.herokuapp.com/" target="_blank">**here**<a> 
 
 ## Table of contents
 * [Description](#description)

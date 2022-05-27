@@ -30,8 +30,8 @@ Now, whether visiting the heroku app or running it locally, the text editor can 
 |   Languages  | Node Modules  |  Node Modules | Runtime Environment |
 | ----------- | ----------- | ----------- |  ----------- | 
 | ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) | @babel | ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB) | ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)  |
-| https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white | babel loader  | mongoose  |   |
-|  https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white  | css loader |  html webpack |    |
+| ![HTML](https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white) | babel loader  | mongoose  |   |
+| ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)  | css loader |  html webpack |    |
 |   |  webpack  | workbox  |   |
 
 ---

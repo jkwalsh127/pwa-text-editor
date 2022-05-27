@@ -27,9 +27,9 @@ module.exports = () => {
         swDest: 'src-sw.js',
       }),
       new WebpackPwaManifest({
-        name: 'Editor',
-        short_name: 'Editor',
-        description: 'Record note and thoughts',
+        name: 'Just Another Text Editor',
+        short_name: 'JATE',
+        description: 'Record notes and thoughts',
         background_color: '#FF5733',
         start_url: './',
         publicPath: './',
